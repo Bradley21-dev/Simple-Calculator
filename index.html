@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator|JS</title>
+    <script src="script.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(145deg, brown,blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: rgb(82, 4, 4);
+            padding: 20px;
+            border-radius: 20px;
+            width: 500px;
+            
+        }
+        .display{
+            background-color: rgb(51, 50, 50);
+            width: 100%;
+            border-radius: 6px;
+            padding: 20px;
+            color: white;
+            height: 7.5rem;
+            font-size: 1.8rem;
+        }
+        .btns{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr 4fr;
+            gap: 10px;
+        }
+        button{
+            width: 96px;
+            height: 96px;
+            border-radius: 50px;
+            font-size: 30px;
+            text-align: center;
+            font-weight: 900;
+            background-color: rgb(247, 8, 8);
+            color: white;
+            border: none;
+            transition: all ease-in-out 0.3s;
+        }
+        .operations{
+            background-color: rgb(51, 50, 50);
+        }
+        .equals{
+            background-color: rgb(3, 139, 3);
+        }
+
+        button:hover{
+            transform: scale(1.1);
+            background-color: rgb(199, 44, 44);
+        }
+        .operations:hover{
+            background-color: rgb(136, 126, 126);
+        }
+        .equals:hover{
+            background-color: rgb(5, 240, 5);
+        }
+        button:active{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display"></div>
+
+        <div class="btns">
+                <button onclick="displayValue('7')">7</button>
+                <button onclick="displayValue('8')">8</button>
+                <button onclick="displayValue('9')">9</button>
+                <button class="operations" onclick="displayValue('*')">*</button>
+
+                <button onclick="displayValue('4')">4</button>
+                <button onclick="displayValue('5')">5</button>
+                <button onclick="displayValue('6')">6</button>
+                <button class="operations" onclick="displayValue('-')">-</button>
+
+                <button onclick="displayValue('1')">1</button>
+                <button onclick="displayValue('2')">2</button>
+                <button onclick="displayValue('3')">3</button>
+                <button class="operations" onclick="displayValue('+')">+</button>
+
+                <button onclick="displayValue('.')">.</button>
+                <button onclick="displayValue('0')">0</button>
+                <button onclick="displayValue('/')">/</button>
+                <button class="equals" onclick="calculate()">=</button>
+                <button class="equals" onclick="clearAll()">A/C</button>
+        </div>
+    </div>
+</body>
+</html>
